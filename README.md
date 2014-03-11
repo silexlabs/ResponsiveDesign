@@ -1,4 +1,4 @@
 BackNode
 ========
 
-POC for CIFACOM Week project
+POC for [CIFACOM](http://www.cifacom.com/) Week project

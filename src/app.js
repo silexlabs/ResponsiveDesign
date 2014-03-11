@@ -1,4 +1,5 @@
 var express = require("express");
+var unifile = require("unifile");
 
 var app = express();
 
@@ -11,4 +12,4 @@ app.get('/', function(req, res) {
     res.send(404, 'Page Introuvable');
 });
 
-app.listen(8080);
+app.listen(process.env.PORT); //80 if set on a custom server
