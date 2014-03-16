@@ -19,3 +19,7 @@ transferBacknode:
 	cp -rf ../BackNode ../admin/BackNode
 	cd ../admin/BackNode && rm -rf ../../BackNode && npm install
 	# done with success !
+
+deployAndRun:
+    npm install
+    node src/app.js
