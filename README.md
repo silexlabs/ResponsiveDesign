@@ -7,45 +7,73 @@ POC for [CIFACOM](http://www.cifacom.com/) Week project
 
 With this project, you can work directly online with some **cloud service**, or on **localhost**, as you wish.
 
-I advise you to use these online services, just for production test / meeting if you want, or try to
-work only with it like me on this project ! It's verry fun !
-
 *If you don't want to use these tool's at all (Hooo -_-") jump to the second step -> clone and build the project*
 
 In order to use these services, you need to sign up on:
 
-- [Cloud9](https://c9.io/) (**1 account per person**) you can signing with your GitHub / Bitbucket account if you have one, your project will be accessible from your dashboard then
-- [heroku](https://id.heroku.com/login) (**1 account per team !**)
+- [GitHub](https://github.com/) (**required**) you must create a account on github (if you have not one yet !) in order to work on this project and fork them
+
+- [Cloud9](https://c9.io/) (**optional**) you can signing with your GitHub / Bitbucket account if you have one, your project will be accessible from your dashboard then
+
+**GitHub** will be our online versionned working copy
+
+and
 
 **Cloud9** will be our working station (node virtual machine, working IDE, testing server, etc...)
 
-**heroku** will be our production server (**WARNING !** Just one account by team, it will be the production version of your team's project)
+or
 
-When you have created your account, please go to your Cloud9 dashboard, and create a new workspace, then start editing it.
+**localhost / bash** hmmm i like black screen :)
+
+
+When you have created your account, if you want try Cloud9, please go to your Cloud9 dashboard, and create a new workspace, then start editing it.
 
 # Clone and build the project
 
-If you are not in Cloud9, open a terminal, otherwise, you have a opened terminal in your cloud9 window, at the bottom. If they not, you can show it with *Tools > show console*
-**or** *Tools > terminal > new terminal*
+First, you need to fork the project from the original repository. Click on the *Fork* button on the top right corner of main project page.
+
+When it's done, clone it !
+
+If you are not in Cloud9, open a terminal, otherwise, you have a opened terminal in your cloud9 window, at the bottom. If they not, you can show it with *Tools > show console* **or** *Tools > terminal > new terminal*
 
 clone the project:
 
-    > git clone https://github.com/RonanDrouglazet/BackNode.git && cd BackNode
+    > git clone https://github.com/[YOUR_ACCOUNT]/BackNode.git && cd BackNode
 
-When all your's team members are ready, one of you (**just one!**) create your team's feature branch. You have to choose a team name. In your Terminal:
-
-    > git checkout -b feature_TeamName
-    > git push -u origin feature_TeamName
-
-When it's done, tell to your team's members to do this step:
-
-    > git fetch origin
-    > git checkout feature_TeamName
-
-allright, all your team's members are in the same feature branch, you can start to build the project
+Ok it's done, you can now build the project and start to work !
 
 ## Build the project
 
 just enter make in your terminal :)
 
     > make
+
+this make command will create folder's ./www/template, our user's custom template directory
+install npm dependencies (express / unifile, but other if you want -> package.json)
+and run the project (src/app.js)
+
+for this project, we want to use [unifile](https://www.npmjs.org/package/unifile) more details on functional spech tech ;)
+
+but as you can see, it's an empty project, choose you own dependencies and make us dream with your technical choice !
+
+## Test
+
+if you are on localhost, project will be accessible from **http://localhost:8080**
+
+if you are on **Cloud9**, abort the node process, and click on the **run & debug** icon (top left), create your own profile or go on app.js and dbl click on the active file (run & debug section), your project will be accessible from outside, you can find your project's url on the output panel:
+
+    https://[PROJECT]-c9-[YOUR_ACCOUNT].c9.io
+
+## Deploy / Git / Pull request
+
+when your feature it's done and you wants to merge it into the main repo, commit your modification in your forked repo, then create a **pull request to silexlabs/BackNode**. I will try to check soon as possible your pull request, do some comment's or not and merge it. Then, i deploy your modification on heroku server :
+
+    http://nodejs-cms.herokuapp.com
+
+the project must be **stable** when you create your pull request
+
+## Contact
+
+If you have any questions / git issue / anything else,
+you can contact me on skype all the day at *ronan.drouglazet*, I cannot promise to you to answer all the time quickly, but i will try !
+If you really don't have success to contact me, try with *lexa.yo*(Alexandre Hoyau)

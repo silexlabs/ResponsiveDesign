@@ -12,4 +12,4 @@ app.get('/', function(req, res) {
     res.send(404, 'Page Introuvable');
 });
 
-app.listen(process.env.PORT); //80 if set on a custom server
+app.listen(process.env.PORT || 8080);
