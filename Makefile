@@ -1,6 +1,6 @@
 make: install
 
-install: brandName createFolder transferBacknode
+install: brandName createFolder buildAndRun
 
 brandName:
 	#    ____             _    _   _           _
@@ -11,15 +11,9 @@ brandName:
 	#   |____/ \__,_|\___|_|\_\_| \_|\___/ \__,_|\___|
 
 createFolder:
-	mkdir ../template
-	mkdir ../admin
-	mkdir ../www
+	mkdir ./www
+	mkdir ./www/template
 
-transferBacknode:
-	cp -rf ../BackNode ../admin/BackNode
-	cd ../admin/BackNode && rm -rf ../../BackNode && npm install
-	# done with success !
-
-deployAndRun:
-    npm install
-    node src/app.js
+buildAndRun:
+	npm install
+	node src/app.js
