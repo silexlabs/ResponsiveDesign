@@ -1,6 +1,4 @@
-make: install
-
-install: brandName createFolder buildAndRun
+make: build brandName run
 
 brandName:
 	#    ____             _    _   _           _
@@ -9,11 +7,13 @@ brandName:
 	#   |  _ < / _` |/ __| |/ / . ` |/ _ \ / _` |/ _ \ JS
 	#   | |_) | (_| | (__|   <| |\  | (_) | (_| |  __/
 	#   |____/ \__,_|\___|_|\_\_| \_|\___/ \__,_|\___|
+	#
+	#
+	# runing ...
 
-createFolder:
-	mkdir ./www
-	mkdir ./www/template
-
-buildAndRun:
+build:
 	npm install
-	node src/app.js
+	grunt
+
+run:
+	node dist/app.min.js

@@ -48,11 +48,11 @@ just enter make in your terminal :)
 
     > make
 
-this make command will create folder's ./www/template, our user's custom template directory
-install npm dependencies (express / unifile, but other if you want -> package.json)
+this make command will install npm dependencies (express / unifile / grunt / etc..), but other if you want -> package.json
+launch grunt compilation
 and run the project (src/app.js)
 
-for this project, we want to use [unifile](https://www.npmjs.org/package/unifile) more details on functional spech tech ;)
+for this project, we want to use [cloud-explorer](https://github.com/silexlabs/cloud-explorer) more details on functional spech tech ;)
 
 but as you can see, it's an empty project, choose you own dependencies and make us dream with your technical choice !
 

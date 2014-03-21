@@ -1,9 +1,9 @@
 var express = require("express");
 var unifile = require("unifile");
 
-var app = express();
+var backnode = express();
 
-app.get('/', function(req, res) {
+backnode.get('/', function(req, res) {
     res.setHeader('Content-Type', 'text/plain');
     res.end('Accueil');
 })
@@ -12,4 +12,4 @@ app.get('/', function(req, res) {
     res.send(404, 'Page Introuvable');
 });
 
-app.listen(process.env.PORT || 8080);
+backnode.listen(process.env.PORT || 8080);
