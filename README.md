@@ -1,4 +1,4 @@
-BackNode
+ResponsiveDesign
 ========
 
 POC for [CIFACOM](http://www.cifacom.com/) Week project
@@ -38,7 +38,7 @@ If you are not in Cloud9, open a terminal, otherwise, you have a opened terminal
 
 clone the project:
 
-    > git clone https://github.com/[YOUR_ACCOUNT]/BackNode.git && cd BackNode
+    > git clone https://github.com/[YOUR_ACCOUNT]/ResponsiveDesign.git && cd ResponsiveDesign
 
 Ok it's done, you can now build the project and start to work !
 
@@ -66,7 +66,7 @@ if you are on **Cloud9**, abort the node process, and click on the **run & debug
 
 ## Deploy / Git / Pull request
 
-when your feature it's done and you wants to merge it into the main repo, commit your modification in your forked repo, then create a **pull request to silexlabs/BackNode**. I will try to check soon as possible your pull request, do some comment's or not and merge it. Then, i deploy your modification on heroku server :
+when your feature it's done and you wants to merge it into the main repo, commit your modification in your forked repo, then create a **pull request to silexlabs/ResponsiveDesign**. I will try to check soon as possible your pull request, do some comment's or not and merge it. Then, i deploy your modification on heroku server :
 
     http://nodejs-cms.herokuapp.com
 
