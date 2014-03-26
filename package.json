@@ -1,0 +1,17 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "jade": "*",
+    "unifile": "0.0.11",
+    "dbox": "~0.6.3",
+    "node-oauth": "~0.1.3",
+    "oauth": "~0.9.11",
+    "path": "~0.4.9"
+  }
+}

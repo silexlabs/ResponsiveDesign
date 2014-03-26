@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/perso.css">
+
+		<!-- necessary for bootstrap and file upload directive -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="js/script.dropbox.js"></script>
+	</head>
+	<body>
+		<button id="connectD" class="btn btn-primary" onclick="javascript:dropboxco()" >Connexion Dropbox</button>
+		<button class="btn btn-info" onclick="javascript:saveFileCss()" >Save file</button>
+		
+		<div id="success-file"></div>
+		
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="name-css">Name file CSS : </label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="name-css" placeholder="Doe">
+					<select name="typeFile" id="typeFile">
+						<option value="css">css</option>
+						<option value="html">html</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="content-css">Content CSS : </label>
+				<div class="col-sm-10">
+					<textarea class="form-control" name="" id="content-css" rows="3" placeholder="John"></textarea>
+				</div>
+			</div>
+		</form>
+		<div id="filesD"></div>
+	</body>
+</html>

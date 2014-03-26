@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  extends layout
+
+  h1= title
+  p Welcome to #{title}
+  ul.test-select
+    li item 1
+    li item 
+      span 2
+    li item 3
+  div.selected-element-html-block
+    h2 Selected element
+    div.selected-html
+  div.selected-element-styles-block
+    h2 Selected element's current styles
+    div.selected-css
+  div.new-element-styles
+    h2 New styles

@@ -1,0 +1,29 @@
+.form-horizontal {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label{
+	margin-right: 10px;
+}
+.form-group textarea{
+	resize: none;
+	width: 500px;
+	height: 300px;
+}
+li.success{
+	background-color: #DFF0D8;
+}
+p.bg,p.bg{
+	padding: 15px;
+	margin: 50px;
+	text-align: center;
+}
+p.bg-success{
+	background-color: #DFF0D8;
+}
+
+p.bg-danger{
+	background-color: #F2DEDE;
+}
