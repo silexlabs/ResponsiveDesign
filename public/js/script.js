@@ -24,7 +24,7 @@ function updateModel(dimensions, node, css){
 	for (var i = 0; i < model.length; i++) {
 		var size = model[i];
 		// for each sizes : check if dimensions exists
-			// if exist : 
+			// if exist :
 		if (size.w === dimensions.w && size.h === dimensions.h) {
 			sizeExist = true;
 			var nodeExist = false;
@@ -78,13 +78,31 @@ function generateCSS(){
 }
 
 function getSelector(node){
-	// dom id (getElementById())
 
-	// dom class (getElementByClassName())
+    var parent = node.parentNode,
+        getNodeSelector = function(node){
+            var nodeSelector = node.tagName;
+            if (node.id) {
+                nodeSelector += "#" + node.id;
+            }
 
-	// dom without id or class
+            if (node.className) {
+                nodeSelector += "." + node.className;
+            }
 
-	return 'div.toto';
+            return nodeSelector;
+        },
+        selector = getNodeSelector(node);
+
+    while(true) {
+        parent = parent.parentNode;
+        if (parent === null || parent === document) {
+            break;
+        }
+        selector = getNodeSelector(parent) + " > " + selector;
+    }
+
+	return selector;
 }
 
 function getStyles(dimensions, node){
@@ -109,4 +127,5 @@ updateModel({w: 480, h: 320}, document.body, "color: red; position: relative;");
 console.log(generateCSS());
 console.log(getStyles({w: 480, h: 320}, document.body));
 console.log(model);
+console.log(getSelector(document.getElementById("pouet")));
 };
