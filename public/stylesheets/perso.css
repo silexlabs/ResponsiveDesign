@@ -28,13 +28,77 @@ p.bg-danger{
 	background-color: #F2DEDE;
 }
 
-
 h1{
-	color: #ddd;
-	font: 35px "harabararegular", Helvetica, Arial, sans-serif;
+	font: 38.5px "harabararegular", Helvetica, Arial, sans-serif;
+}
+
+#popup{
+	position: relative;
 	width: 780px;
-	height: 60px;
+	background-color: #ddd;
+	padding-bottom: 15px;
+}
+
+#popup h1{
+	color: #fafafa;
+	font: 38.5px "harabararegular", Helvetica, Arial, sans-serif;
+	height: 40px;
 	background-color: #f5843e;
+	padding: 10px;
+	margin-bottom: 16px;
+}
+
+#popup .btn-primary{
+	color: #fafafa;
+	font-size: 16px;
+	font-family: 'deckerregular';
+	background-color: #f7973a;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+#popup .btn-info{
+	background-image: url('../img/button-validate.png');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	width: 33px;
+	height: 33px;
+	cursor: pointer;
+	position: absolute;
+	top: 90px;
+	right: 20px;
+}
+
+#popup #copy{
+	background-image: url('../img/button-copy.png');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	width: 46px;
+	height: 46px;
+	cursor: pointer;
+	margin-left: 20px;
+	float: left;
+}
+#popup #copy:hover{
+	background-image: url('../img/button-copy-hover.png');
+}
+
+#popup .message{
+	background-color: #f2f2f2;
+	width: 568px;
+	margin-left: 75px;
+	padding-top: 22px;
+	padding-bottom: 7px;
+	padding: 22px 20px 7px;
+}
+
+#popup #success-file{
+	clear: both;
+	margin-left: 20px;
 }
 
 
