@@ -160,6 +160,25 @@ var availableCssProperties = [
     "z-index",
     "zoom"
 ];
+var tabSize = [{
+    width: 0,
+    height: 0
+}, {
+    width: 320,
+    height: 480
+}, {
+    width: 480,
+    height: 320
+}, {
+    width: 768,
+    height: 1024
+}, {
+    width: 1024,
+    height: 768
+}, {
+    width: 1280,
+    height: 800
+}];
 
 $(document).ready(function() {
     // Select an element with jQuery UI
@@ -183,6 +202,21 @@ $(document).ready(function() {
             $('.selected-css').html('<ul class="css-list">' + allCss + '</ul>');
         }
     });
+    var select = $("#minbeds");
+    var slider = $("<div id='slider'></div>").insertAfter(select).slider({
+        min: 1,
+        max: 5,
+        range: "min",
+        value: select[0].selectedIndex + 1,
+        slide: function(event, ui) {
+            select[0].selectedIndex = ui.value - 1;
+            $('#size').val(tabSize[ui.value].width + 'x' + tabSize[ui.value].height + 'px');
+        }
+    });
+    $("#minbeds").change(function() {
+        slider.slider("value", this.selectedIndex + 1);
+        $('#size').val(tabSize[slider.slider("value")].width + 'x' + tabSize[slider.slider("value")].height + 'px');
+    });
 });
 
 function getStyle(oElm, strCssRule) {
@@ -197,3 +231,8 @@ function getStyle(oElm, strCssRule) {
     }
     return strValue;
 }
+var editor = CodeMirror.fromTextArea(document.getElementById("content-css"), {
+    lineNumbers: true,
+    matchBrackets: true,
+    theme: "responsize"
+});
