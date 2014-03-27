@@ -6,6 +6,7 @@
 var express = require('express');
 var routes = require('./routes');
 var widgets = require('./routes/widgets');
+var cloudExplorer = require('./routes/cloudExplorer');
 var http = require('http');
 var path = require('path');
 var unifile = require('unifile');
@@ -27,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // config
 var options = unifile.defaultConfig;
-
+/*
 // add static folders
 options.staticFolders.push(
     // file browser
@@ -36,11 +37,12 @@ options.staticFolders.push(
             path: "../../../../lib/app/"
     }
 );
-
+*/
 // use unifile as a middleware
 app.use(unifile.middleware(express, app, options));
 app.get('/', routes.index);
-app.get('/widgets', widgets.list);
+app.get('/widgets', widgets.index);
+app.get('/cloud-explorer', cloudExplorer.index);
 
 // server 'loop'
 var port = process.env.PORT || 6805; // 6805 is the date of sexual revolution started in paris france 8-)
