@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 	$('#saveFile').hide();
+	$('#saveDisk').hide();
 	$.get('/api/v1.0/services/list/')
 		.done(function(res){
 			if(res[0].isConnected && res[0].isLoggedIn){
@@ -15,6 +16,7 @@ function buttonConnexion(){
 				.addClass('btn-success')
 				.attr('onclick', 'javascript:logoutD()');
 	$('#saveFile').show();
+	$('#saveDisk').show();
 }
 
 function logoutD(){
@@ -55,6 +57,13 @@ function dropboxco(){
 	})
 }
 
+function saveDisk(){
+	var content = $('#content-css').val(),
+		name = ($('#name-css').val() != "" ) ? $('#name-css').val() : "style",
+		type = $('#typeFile').val();
+
+	window.location = '/download/'+encodeURIComponent(name+'.'+type) + '/' + btoa(content);
+}
 
 function saveFileCss(){
 	var content = $('#content-css').val(),
@@ -65,14 +74,7 @@ function saveFileCss(){
 		data: content
 	})
 		.done(function(req, res){
-				$('#filesD li').removeClass('success');
-				$('#filesD ul').append('<li class="success">'+name+'.'+type+'</li>');
-
-				var url = encodeURIComponent('/api/v1.0/dropbox/exec/get/'+name+'.'+type) + '/' + btoa(content);
-
-
-				var download = '<a target="_blank" href="/download/'+url+'" >download</a>';
-				$('#success-file').html('<p class="bg bg-success">Fichier bien ajouté ! '+download+'</p>');
+				$('#success-file').html('<p class="bg bg-success">Fichier bien ajouté !</p>');
 		})
 		.fail(function(){
 			$('#success-file').html('<p class="bg bg-danger">Le fichier n\'a pas été ajouté</p>');
