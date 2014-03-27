@@ -29,8 +29,8 @@ function updateModel(dimensions, node, css){
 			sizeExist = true;
 			var nodeExist = false;
 			for (var j = 0; j < size.content.length; j++) {
-				if (size.content.node === node) {
-					size.content.style = css;
+				if (size.content[j].node === node) {
+					size.content[j].style = css;
 					nodeExist = true;
 					break;
 				}
@@ -59,15 +59,15 @@ function generateCSS(){
 	for (var i = 0; i < model.length; i++) {
 		var size = model[i];
 		// - write media queries (begin) with width
-		css += "@media (max-width: "+ size.w +"px){";
+		css += "@media (max-width: "+ size.w +"px){\n";
 		// - for each item in size.content,
 		for (var j = 0; j < size.content.length; j++) {
 			// - write node selector (begin)
-			css += getSelector(size.content.node) +"{";
+			css += getSelector(size.content[j].node) +"{\n";
 			// - write styles
-			css += size.content.style;
+			css += size.content[j].style;
 			// - write node selector (end)
-			css += "}";
+			css += "\n}\n";
 		}
 		// - write media queries (end)
 		css += "}";
@@ -93,8 +93,8 @@ function getStyles(dimensions, node){
 
 		if (size.w === dimensions.w && size.h === dimensions.h) {
 			for (var j = 0; j < size.content.length; j++) {
-				if (size.content.node === node) {
-					return size.content.style;
+				if (size.content[j].node === node) {
+					return size.content[j].style;
 				}
 			}
 		}
@@ -104,5 +104,9 @@ function getStyles(dimensions, node){
 	return '';
 }
 
-updateModel({w:480, h:200}, document.body, "margin-left:5px;");
+window.onload = function(){
+updateModel({w: 480, h: 320}, document.body, "color: red; position: relative;");
 console.log(generateCSS());
+console.log(getStyles({w: 480, h: 320}, document.body));
+console.log(model);
+};
