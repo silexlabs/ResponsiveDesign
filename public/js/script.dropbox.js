@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+	$('#saveFile').hide();
 	$.get('/api/v1.0/services/list/')
 		.done(function(res){
 			if(res[0].isConnected && res[0].isLoggedIn){
@@ -10,10 +10,11 @@ $( document ).ready(function() {
 });
 
 function buttonConnexion(){
-	return $('#connectD').html('Logout')
+	$('#connectD').html('Logout')
 				.removeClass('btn-primary')
 				.addClass('btn-success')
 				.attr('onclick', 'javascript:logoutD()');
+	$('#saveFile').show();
 }
 
 function logoutD(){
@@ -57,7 +58,7 @@ function dropboxco(){
 
 function saveFileCss(){
 	var content = $('#content-css').val(),
-		name = $('#name-css').val(),
+		name = ($('#name-css').val() != "" ) ? $('#name-css').val() : "style",
 		type = $('#typeFile').val();
 
 	$.post("/api/v1.0/dropbox/exec/put/"+name+"."+type,{

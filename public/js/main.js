@@ -240,3 +240,8 @@ if($('#content-css').length > 0){
         theme: "responsize"
     });
 }
+
+$('#copy').click(function(e){
+    editor.setSelection({line: 0, ch: 0}, {line: editor.lineCount() - 1});
+    editor.focus();
+})

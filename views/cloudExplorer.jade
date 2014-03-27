@@ -6,7 +6,7 @@ block content
 		h1 Take your css !
 
 		button(id="connectD", class="btn btn-primary", onclick="javascript:dropboxco()") Connexion Dropbox
-		button(class="btn btn-info", onclick="javascript:saveFileCss()")
+		button(id="saveFile", class="btn btn-info", onclick="javascript:saveFileCss()")
 		br
 			
 		div#success-file
@@ -15,7 +15,7 @@ block content
 				div.form-group
 					label(class="col-sm-2 control-label", for="name-css") Name file CSS :
 					div.col-sm-10
-						input(class="form-control", type="text", id="name-css", placeholder="Doe")
+						input(class="form-control", type="text", id="name-css", placeholder="style")
 						select(name="typeFile", id="typeFile")
 							option(value="css") css
 							option(value="html") html
@@ -23,7 +23,7 @@ block content
 				div.form-group
 					label(class="col-sm-2 control-label", for="content-css") Content CSS :
 					div.col-sm-10
-						textarea(class="form-control", name="", id="content-css", rows="3", placeholder="John")
+						textarea(class="form-control", name="content-css", id="content-css", rows="3", placeholder="John")
 							| .test-select.ui-selectable .ui-selectee{
 							|	cursor: pointer;
 							| }
@@ -49,5 +49,5 @@ block content
 
 			div#filesD
 
-		button#copy
+		button(id="copy")
 		div.message Select all your css, copy/paste it in your file, and you're done!
