@@ -31,6 +31,9 @@ p.bg-danger{
 h1{
 	font: 38.5px "harabararegular", Helvetica, Arial, sans-serif;
 }
+#connectD{
+    cursor: pointer;
+}
 
 #popup{
 	position: relative;

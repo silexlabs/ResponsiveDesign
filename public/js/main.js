@@ -203,20 +203,22 @@ $(document).ready(function() {
         }
     });
     var select = $("#minbeds");
-    var slider = $("<div id='slider'></div>").insertAfter(select).slider({
-        min: 1,
-        max: 5,
-        range: "min",
-        value: select[0].selectedIndex + 1,
-        slide: function(event, ui) {
-            select[0].selectedIndex = ui.value - 1;
-            $('#size').val(tabSize[ui.value].width + 'x' + tabSize[ui.value].height + 'px');
-        }
-    });
-    $("#minbeds").change(function() {
-        slider.slider("value", this.selectedIndex + 1);
-        $('#size').val(tabSize[slider.slider("value")].width + 'x' + tabSize[slider.slider("value")].height + 'px');
-    });
+    if(select.length > 0){
+        var slider = $("<div id='slider'></div>").insertAfter(select).slider({
+            min: 1,
+            max: 5,
+            range: "min",
+            value: select[0].selectedIndex + 1,
+            slide: function(event, ui) {
+                select[0].selectedIndex = ui.value - 1;
+                $('#size').val(tabSize[ui.value].width + 'x' + tabSize[ui.value].height + 'px');
+            }
+        });
+        $("#minbeds").change(function() {
+            slider.slider("value", this.selectedIndex + 1);
+            $('#size').val(tabSize[slider.slider("value")].width + 'x' + tabSize[slider.slider("value")].height + 'px');
+        });
+    }
 });
 
 function getStyle(oElm, strCssRule) {
@@ -231,8 +233,10 @@ function getStyle(oElm, strCssRule) {
     }
     return strValue;
 }
-var editor = CodeMirror.fromTextArea(document.getElementById("content-css"), {
-    lineNumbers: true,
-    matchBrackets: true,
-    theme: "responsize"
-});
+if($('#content-css').length > 0){
+    var editor = CodeMirror.fromTextArea(document.getElementById("content-css"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        theme: "responsize"
+    });
+}

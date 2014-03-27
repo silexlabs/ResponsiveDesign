@@ -3,14 +3,18 @@ $( document ).ready(function() {
 	$.get('/api/v1.0/services/list/')
 		.done(function(res){
 			if(res[0].isConnected && res[0].isLoggedIn){
-				$('#connectD').html('Logout')
-							.removeClass('btn-primary')
-							.addClass('btn-success')
-							.attr('onclick', 'javascript:logoutD()');
+				buttonConnexion();
 			}
 		});
 
 });
+
+function buttonConnexion(){
+	return $('#connectD').html('Logout')
+				.removeClass('btn-primary')
+				.addClass('btn-success')
+				.attr('onclick', 'javascript:logoutD()');
+}
 
 function logoutD(){
 	$.get('/api/v1.0/dropbox/logout')
@@ -40,10 +44,7 @@ function dropboxco(){
 								if(res.success){
 									$.get('/api/v1.0/dropbox/account/')
 										.done(function(res){
-											$('#connectD').html('Logout')
-															.removeClass('btn-primary')
-															.addClass('btn-success')
-															.attr('onclick', 'javascript:logoutD()');
+											buttonConnexion();
 										});
 								}
 							})
