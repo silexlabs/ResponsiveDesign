@@ -77,9 +77,11 @@ header h1{margin-top: 0;}
 
 /* MAIN CONTENT */
 .container-fluid {padding: 0;}
+iframe {width: 100%; height: 1200px;}
 
 /* SIDEBAR */
 .sidebar {background-color: #dddddd; padding: 0 0 0 10px; margin-top: -72px;}
+.span3.sidebar {background-color: #dddddd; padding: 0 0 0 10px; margin-top: -72px; width: 25.63%; margin-left: 0;}
 .command_buttons {padding: 20px 0; background-color: #666666;}
 .command_buttons ul {list-style-type: none; list-style-image: none; padding: 0; margin: 0;}
 .command_buttons ul li {float: left; height: 32px;}
@@ -109,8 +111,7 @@ header h1{margin-top: 0;}
 .wid_cont {min-height:250px; max-height:250px; }
 }	
 
- /****** CONTENT ******/
-.span9 { background-color:green; }
+
 
 /* LOADED PAGE */
 .content {}

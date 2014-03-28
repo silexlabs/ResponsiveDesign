@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  header
+  header(style='height: auto; position: static;')
     .container-fluid(style='')
         .row-fluid
           .span2
@@ -45,29 +45,7 @@ block content
       .row-fluid
         .span9.selecto
           .content.framePage
-            h2 CHARGEMENT DE LA PAGE ICI
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            br
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            br
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            br
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            br
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            br
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ullam suscipit dignissimos fugit molestias voluptatibus praesentium voluptatum eius tempora. Enim, explicabo unde autem fuga possimus ullam itaque culpa voluptatum qui.
-            #testo
-              #2
-                ul
-                  li
-                    span yo !
+            iframe(src='http://localhost/cifacom-reseau_inte')
         .span3.sidebar
           .command_buttons
             ul.clearfix
