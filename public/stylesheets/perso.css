@@ -45,13 +45,13 @@ h1{
 #popup h1{
 	color: #fafafa;
 	font: 38.5px "harabararegular", Helvetica, Arial, sans-serif;
-	height: 40px;
+	height: 60px;
 	background-color: #f5843e;
 	padding: 10px;
 	margin-bottom: 16px;
 }
 
-#popup .btn-primary{
+#popup .btn-primary, #popup .btn-success{
 	color: #fafafa;
 	font-size: 16px;
 	font-family: 'deckerregular';
@@ -102,6 +102,10 @@ h1{
 #popup #success-file{
 	clear: both;
 	margin-left: 20px;
+}
+
+#popup .col-sm-10{
+	width: 740px;
 }
 
 

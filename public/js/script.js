@@ -1,22 +1,5 @@
 var model = [];
 
-var datas = {
-	"item": [
-		{ "w": 400,
-		  "h": 300,
-		 "content":
-		 [
-		 	{
-		 		"style": "position: relative; width: 100%",
-		 		"node": "body"
-		 	}
-
-		 ]
-		}
-	]
-}
-
-
 function updateModel(dimensions, node, css){
 	var sizeExist = false;
 
@@ -24,7 +7,7 @@ function updateModel(dimensions, node, css){
 	for (var i = 0; i < model.length; i++) {
 		var size = model[i];
 		// for each sizes : check if dimensions exists
-			// if exist :
+			// if exist : 
 		if (size.w === dimensions.w && size.h === dimensions.h) {
 			sizeExist = true;
 			var nodeExist = false;
@@ -122,10 +105,3 @@ function getStyles(dimensions, node){
 	return '';
 }
 
-window.onload = function(){
-updateModel({w: 480, h: 320}, document.body, "color: red; position: relative;");
-console.log(generateCSS());
-console.log(getStyles({w: 480, h: 320}, document.body));
-console.log(model);
-console.log(getSelector(document.getElementById("pouet")));
-};
