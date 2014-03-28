@@ -48,7 +48,7 @@ h1{
 	margin-bottom: 16px;
 }
 
-#popup .btn-primary{
+#popup .btn-primary, #popup .btn-success{
 	color: #fafafa;
 	font-size: 16px;
 	font-family: 'deckerregular';
@@ -99,6 +99,10 @@ h1{
 #popup #success-file{
 	clear: both;
 	margin-left: 20px;
+}
+
+#popup .col-sm-10{
+	width: 740px;
 }
 
 

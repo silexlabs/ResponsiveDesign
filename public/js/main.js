@@ -164,9 +164,6 @@ var tabSize = [{
     width: 0,
     height: 0
 }, {
-    width: 320,
-    height: 480
-}, {
     width: 480,
     height: 320
 }, {
@@ -205,7 +202,7 @@ $(document).ready(function() {
     var select = $("#minbeds");
     var slider = $("<div id='slider'></div>").insertAfter(select).slider({
         min: 1,
-        max: 5,
+        max: 4,
         range: "min",
         value: select[0].selectedIndex + 1,
         slide: function(event, ui) {
