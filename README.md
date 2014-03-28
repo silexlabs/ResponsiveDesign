@@ -3,7 +3,6 @@
 Here is the new application from [Silex Labs](http://www.silexlabs.org/ "Silex Labs") who allow you to edit in live your website and got your css directly on your [Dropbox](http://www.dropbox.com "Dropbox")
 
 # Developer
-## How to install
 **Warning** The server work only on Mac/Linux computer (sorry windows users :'( )
 
 ## First step
@@ -56,3 +55,6 @@ It will install this dependencies :
 * [Express](http://expressjs.com/, "Express")
 * [Jade](http://jade-lang.com/, "Jade")
 * [Unifile](https://github.com/silexlabs/unifile, "Unifile")
+
+# TODO
+
