@@ -1,5 +1,112 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    .cntnr
+        a.logo-header(href='#home')
+          img(src='img/logo-home.png', alt='Bienvenue sur ResponSize !')
+        nav
+          ul
+            li.home-item.selected
+              a(href='#home') Home
+
+            li.features-item
+              a(href='#features') Features
+
+            li.usage-item
+              a(href='#usage') Usage
+
+            li.contact-item
+              a(href='#contact') Contact
+        div(style='clear: both;')
+  .all-cntnr
+      section#home
+        .content-home
+          h1 Responsive fast ?
+          p
+            | ResponSize is an amazing tool that enables the user to generate a responsive style sheet for a website. ResponSize can help you to have an optimal viewing experience for your website!
+          .separator
+          a.btn-orange(href='') Use ResponSize
+        article.showcase
+          .cntnr
+            h1 Stunning app showcase
+            p
+              | Follow us on Facebook and Twitter so you can stay up to date on the latest events, news and updates about ResponSize!
+            img(src='img/home/separator.png', alt='')
+            a.facebook(href='https://www.facebook.com/pages/Responsize/219075621634360', title='Follow us on Facebook')
+            a.twitter(href='https://twitter.com/responsize', title='Follow us on Twitter')
+      section#features
+        .cntnr
+          article.import
+            span.features-icon
+            h2 Easy HTML import
+            p
+              | Put your url, our bot will copy your html page and you will be able to define all the part of your page you want to be optimised.
+          article.preview
+            span.features-icon
+            h2 Live Preview
+            p
+              | Edit in live view your css with the possibility of copy paste your actual code, to custom the sizing of your website elements.
+          article.cloud
+            span.features-icon
+            h2 Cloud Upload
+            p
+              | Download your project files or upload it directly to your Dropbox or Google Drive using the Cloud Explorer
+          div(style='clear: both;')
+        .users
+          .cntnr
+            div
+              h3 1250
+              span users
+            div
+              h3 235
+              span contributors
+            div
+              h3 25
+              span designers
+            div
+              h3 21
+              span developers
+      section#usage
+        .cntnr
+          h1 Easy to use
+          img(src='img/usage/separator-usage.png', alt='')
+          p Choose a screensize. Click generate. And you're done.
+          img.img-screen(src='img/usage/screen.png', alt='')
+      section#contact
+        .newsletter
+          .cntnr
+            input(type='email', placeholder='YOUR EMAIL ADDRESS')
+
+            input.btn-orange(type='submit', value='SUBSCRIBE NOW')
+        .left-element
+        .right-element
+        article.about-responsize.cntnr
+          .fleche-newsletter
+          img.logo-responsize(src='img/logo-home.png', alt='Essayer ResponSize !', width='300')
+          .github
+            h2 responsize is an open source project. you can get all the sources on
+            a.btn-orange(href='#')
+              img(src='img/contact/btn-github.png', alt='GITHUB')
+          div(style='clear: both;')
+          p
+            | ResponSize was created by the CIFACOM students, in collaboration with
+            a(href='http://www.silexlabs.org/') SILEXLABS
+            | , a non profit organization dedicated to helping open source communities.
+            br
+            br
+            | Hope you will enjoy !
+      footer
+        .cntnr
+          .backnode
+            img(src='img/footer/backnode_logotype.png', alt='Try BackNode !')
+            p
+              | Edit your website. Simply! You can use the new CMS BackNode. Simple, rapid, useful to edit your website.
+              a.btn-orange(href='#') Try BackNode !
+            div(style='clear: both;')
+          a.facebook(href='https://www.facebook.com/pages/Responsize/219075621634360', title='Follow us on Facebook !')
+          a.twitter(href='https://twitter.com/responsize', title='Follow us on Twitter !')
+          .footer-link
+            a(href='#') Conditions of use
+            | -
+            a(href='#') Privacy Policy
