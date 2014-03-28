@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  extends layout
+
+  h1= title
+  p Welcome to #{title}
+  ul.test-select
+    li item 1
+    li item 
+      span 2
+    li item 3
+  div.selected-element-html-block
+    h2 Selected element
+    div.selected-html
+  div.selected-element-styles-block
+    h2 Selected element's current styles
+    div.selected-css
+  div.new-element-styles
+    h2 New styles
+
+  form#reservation
+      label(for="minbeds")
+      select(name="minbeds", id="minbeds")
+        option 1
+        option 2
+        option 3
+        option 4
+        option(selected="selected") 5
+      input(id="size", type="text", value="1280x800px")

@@ -1,7 +1,9 @@
-ResponsiveDesign
-========
+# Responsize 
 
-POC for [CIFACOM](http://www.cifacom.com/) Week project
+Here is the new application from [Silex Labs](http://www.silexlabs.org/ "Silex Labs") who allow you to edit in live your website and got your css directly on your [Dropbox](http://www.dropbox.com "Dropbox")
+
+# Developer
+**Warning** The server work only on Mac/Linux computer (sorry windows users :'( )
 
 ## First step
 
@@ -42,38 +44,28 @@ clone the project:
 
 Ok it's done, you can now build the project and start to work !
 
-## Build the project
+# Build your project
 
-just enter make in your terminal :)
+To install and launch your app, just launch the following command in your terminal
 
-    > make
+    > npm install && node app.js
 
-this make command will install npm dependencies (express / unifile / grunt / etc..), but other if you want -> package.json
-launch grunt compilation
-and run the project (src/app.js)
+It will install this dependencies : 
 
-for this project, we want to use [cloud-explorer](https://github.com/silexlabs/cloud-explorer) more details on functional spech tech ;)
+* [Express](http://expressjs.com/, "Express")
+* [Jade](http://jade-lang.com/, "Jade")
+* [Unifile](https://github.com/silexlabs/unifile, "Unifile")
 
-but as you can see, it's an empty project, choose you own dependencies and make us dream with your technical choice !
 
-## Test
+# Routing
 
-if you are on localhost, project will be accessible from **http://localhost:8080**
+* / : root of the web site  landing page
+* /page : webApp page
+* /cloud-explorer : URL of the webservie for cloud saving
+* /iframe?url: : URL of the website you want to load into the Iframe (must be encode)
 
-if you are on **Cloud9**, abort the node process, and click on the **run & debug** icon (top left), create your own profile or go on app.js and dbl click on the active file (run & debug section), your project will be accessible from outside, you can find your project's url on the output panel:
+# TODO
 
-    https://[PROJECT]-c9-[YOUR_ACCOUNT].c9.io
-
-## Deploy / Git / Pull request
-
-when your feature it's done and you wants to merge it into the main repo, commit your modification in your forked repo, then create a **pull request to silexlabs/ResponsiveDesign**. I will try to check soon as possible your pull request, do some comment's or not and merge it. Then, i deploy your modification on heroku server :
-
-    http://nodejs-cms.herokuapp.com
-
-the project must be **stable** when you create your pull request
-
-## Contact
-
-If you have any questions / git issue / anything else,
-you can contact me on skype all the day at *ronan.drouglazet*, I cannot promise to you to answer all the time quickly, but i will try !
-If you really don't have success to contact me, try with *lexa.yo*(Alexandre Hoyau)
+* Get Iframe (A begin of solution was found, look at line 48 into app.js)
+* Get Iframe's DOM
+* Call with AJAX, the root /cloud-explorer

@@ -1,0 +1,5 @@
+.cm-s-responsize.CodeMirror {background: #ffffff; color: #666666; font-size: 12px;}
+
+.cm-s-responsize .CodeMirror-gutters {background: #666666; border-right: 0px;}
+.cm-s-responsize .CodeMirror-linenumber {color: #ffffff; text-align: center; font-size: 12px;}
+.cm-s-responsize .CodeMirror-lines {line-height: 1.4em;}

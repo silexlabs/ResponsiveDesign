@@ -1,0 +1,90 @@
+extends layout
+
+block content
+
+  header(style='height: auto; position: static;')
+    .container-fluid(style='')
+        .row-fluid
+          .span2
+            h1(style='text-align: center;')
+              img(src='img/logo.png', alt='')
+          .span6
+            .search
+              form(action='')
+                img(src='img/link.png', alt='')
+                input(type='text', name='search', value='Write your URL...')
+                input(type='submit', name='submit', value='Go')
+          .span4
+            #dropbox
+              a(href='#')
+                span Connect to
+                img(src='img/dropbox.png', alt='')
+
+  .row-fluid
+    .span9
+        .tools
+          form#reservation
+            ul
+              li
+                img(src='img/iphone-blanc.png', alt='')
+              li
+                img(src='img/ipad-blanc.png', alt='')
+              li
+                img(src='img/imac-blanc.png', alt='')
+              li
+                img(src='img/macbook-blanc.png', alt='')
+            label(for='minbeds')
+            select#minbeds(name='minbeds')
+              option 1
+              option 2
+              option 3
+              option(selected='selected') 4
+              option 5
+            input#size(type='text', value='1280x800px')
+    .container-fluid.container-page
+      .row-fluid
+        .span9.selecto
+          .content.framePage
+            iframe(src='http://localhost/cifacom-reseau_inte')
+        .span3.sidebar
+          .command_buttons
+            ul.clearfix
+              li.span3
+                
+              li.span3
+                
+              li.span3
+                
+              li.span3
+                img(src='img/img-validate.png')
+          .widget
+            .wid_title
+              h2 HTML
+            #showhtml.wid_cont
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, voluptates consequatur alias officiis rem ab ipsam repudiandae tempore labore quos minus veritatis temporibus porro! Vel corporis repellat a fugiat quo?
+          .widget
+            #showcss.wid_title
+              h2 OLD CSS
+            .wid_cont.oldcss
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!
+          .widget
+            .wid_title
+              h2 YOUR CSS
+            #editcss.wid_cont.yourcss
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!
+    footer.jumbotron
+      hr
+      p CIFACOM 2014 - SILEXLABS
+    script
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\\/script>')
+    script
+      $( '.widget' ).resizable({
+      handles: 's',
+      minHeight: 220
+      });

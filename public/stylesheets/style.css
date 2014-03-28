@@ -1,0 +1,38 @@
+body {
+  padding: 0px;
+  font: 14px "deckerregular", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/**** Selectable elements ****/
+ul li{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #222222;
+}
+
+.test-select.ui-selectable .ui-selectee{
+	cursor: pointer;
+}
+
+.test-select.ui-selectable .ui-selectee:hover{
+	border: 2px dotted #007BA8;
+}
+
+.test-select.ui-selectable .ui-selecting{
+	border: 2px solid #007BA8;
+}
+
+.test-select.ui-selectable .ui-selected{
+	border: 2px solid #007BA8;
+}
+
+.test-select.ui-selectable li:first-child{
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 9px;
+}
