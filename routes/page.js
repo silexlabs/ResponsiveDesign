@@ -4,6 +4,6 @@
 
 exports.index = function(req, res) {
     res.render('page', {
-        title: 'page'
+        title: 'Responsize - Web APP'
     });
 };
