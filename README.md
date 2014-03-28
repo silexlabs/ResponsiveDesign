@@ -56,5 +56,16 @@ It will install this dependencies :
 * [Jade](http://jade-lang.com/, "Jade")
 * [Unifile](https://github.com/silexlabs/unifile, "Unifile")
 
+
+# Routing
+
+* / : root of the web site  landing page
+* /page : webApp page
+* /cloud-explorer : URL of the webservie for cloud saving
+* /iframe?url: : URL of the website you want to load into the Iframe (must be encode)
+
 # TODO
 
+* Get Iframe (A begin of solution was found, look at line 48 into app.js)
+* Get Iframe's DOM
+* Call with AJAX, the root /cloud-explorer
